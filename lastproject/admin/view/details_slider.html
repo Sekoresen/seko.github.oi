@@ -1,0 +1,27 @@
+<div class="container">
+  <div id="addMenu">
+
+
+
+<h3>Details Slider</h3>
+<div class="alert alert-success" ng-show="successAlert">
+    Uspesno vnesovte slider
+</div>
+<div class="alert alert-danger" ng-show="dangerAlert">
+    Popolnetego pravilno formularot
+</div>
+<form name="myForm">
+    <div class="form-group">
+        <label for="slider_img">Slider image:</label>
+        <div ng-show="myForm.slider_img.$invalid" class="alert alert-danger">Vnesete  so min 3 kar</div>
+        <input type="text" class="form-control" placeholder="Slider" name="slider_img" id="slider_img" ng-model="slider_img" ng-minlength="3">
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary" ng-click="(myForm.slider_img.$valid)     ? 
+        function_details_slider(slider_img) : 
+        function_error()">SAVE</button>
+      </div>
+    
+    </div>
+  </div>

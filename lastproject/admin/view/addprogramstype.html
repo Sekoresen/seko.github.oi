@@ -1,0 +1,19 @@
+<div class="container-fluid">
+<div id="menuAdd">
+<h3>Type of Programs</h3>
+
+<div class="alert alert-danger" ng-show="successAlert">Succesfully added</div>
+<form name="myForm">
+    <div class="form-group">
+        <label for="program_type">Type of program:</label>
+        <input type="text" name="program_type" id="program_type" ng-model="programs_type[checkUrl].program_type" class="form-control" placeholder="Program...">
+    </div>
+    <div class="form-group">
+        <button ng-show="checkUrl===undefined" class="btn btn-primary" ng-click="function_addProgramType(programs_type[checkUrl].program_type, 'insert')">Save</button>
+    </div>
+    <div class="form-group">
+        <button ng-show="checkUrl!==undefined" class="btn btn-primary" ng-click="function_addProgramType(programs_type[checkUrl].program_type, 'update')">EDIT</button>
+    </div>
+</form>
+</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div id="menuAdd">
+<h3>SUBMENU</h3>
+<div class="alert alert-success" ng-show="successAlert">Sucessfully added new product</div>
+<div class="alert alert-success" ng-show="successEditAlert">Sucessfully updated product</div>
+<form name="myForm">
+    <div class="form-group">
+        <label for="product_type">Product type:</label>
+        <input type="text" name="product_type" id="product_type" ng-model="submenu[checkUrl].product_type" class="form-control" placeholder="Product...">
+        <input type="hidden" name="product_id" id="product_id" class="form-control" ng-model="submenu[checkUrl].product_id">
+    </div>
+    <div class="form-group">
+        <label for="category_name">Category:</label>
+        <select name="category_name" id="category_name" class="form-control" ng-model="submenu[checkUrl].category_name">
+        <option ng-repeat="categories in categories" value="{{categories.category_name}}">
+            {{categories.category_name}}
+        </option>
+    </select>
+    </div>
+    <div class="form-group">
+        <button ng-show="checkUrl===undefined" class="btn btn-primary" ng-click="function_addSubmenu(submenu[checkUrl].product_type,submenu[checkUrl].category_name, submenu[checkUrl].product_id, 'insert')">Save</button>
+    </div>
+    <div class="form-group">
+        <button ng-show="checkUrl!==undefined" class="btn btn-primary" ng-click="function_addSubmenu(submenu[checkUrl].product_type,submenu[checkUrl].category_name, submenu[checkUrl].product_id, 'update')">EDIT</button>
+    </div>
+</form>
+</div>
+</div>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessBodyPlan</title>
+    <!-- Bootstrap 4 Framework -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/owl.carousel.min.css"> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script> -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- <script src="assets/js/main.js"></script> -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    <!-- <script src="assets/js/owl.carousel.min.js"></script> -->
+    
+
+    <!-- AngularJS Framework -->
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.js"></script>
+    <script src="assets/js/app.js"></script> <!--app js scripta za kucanje-->
+    <script src="assets/js/routes.js"></script> <!--routes js scripta za kucanje-->
+
+    <!-- My Style -->
+    
+    <link rel="stylesheet" href="assets/css/style.css">  <!--css za kucanje-->
+    
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <header class="header-column">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container">
+                <a href="#" class="navbar-brand"><img src="uploads/logo.png" alt="" height="50px" width="50px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#listaNav" aria-controls="listaNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="listaNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#!main" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!supplements" class="nav-link">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!programs" class="nav-link">Program</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!trainer" class="nav-link">Trainers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!memberi" class="nav-link"> Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a href="webhosting/index.html" class="nav-link">Sign Up</a>
+                </li>
+           </ul>
+        </div>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+    <ng-view></ng-view>
+
+
+    <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Last Project</h3>
+            <p>
+              Josif Josifovski <br>
+              Resen, MkD 535022<br>
+              Macedonia <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful links</h4>
+            <ul>
+              <li><i class="fa fa-angle-double-right"></i> <a href="https://www.bodybuilding.com/">Bodybuilding</a></li>
+              <li><i class="fa fa-angle-double-right"></i> <a href="https://hardcoreshop.mk/">Hardcore</a></li>
+              <li><i class="fa fa-angle-double-right"></i> <a href="https://polleosport.mk/index.php?route=checkout/cart">Polleo</a></li>
+              <li><i class="fa fa-angle-double-right"></i> <a href="https://nolimit.mk/">No limit</a></li>
+              <li><i class="fa fa-angle-double-right"></i> <a href="webhosting/index.html"><b>Sign up today</b></a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="fa fa-angle-double-right"></i> <a href="#!main">Home</a></li>
+              <li><i class="fa fa-angle-double-right"></i> <a href="#!supplements">Shop</a></li>
+              <li><i class="fa fa-angle-double-right"></i> <a href="#!programs">Programs</a></li>
+              <li><i class="fa fa-angle-double-right"></i> <a href="#!trainer">Trainers</a></li>
+              <li><i class="fa fa-angle-double-right"></i> <a href="#!memberi">Reviews</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Last Project</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://www.twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.skype.com" class="google-plus"><i class="fa fa-skype"></i></a>
+        <a href="https://www.linkedin.org" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <script>
+    $(window).scroll(function() {
+  var scrollTop = $(window).scrollTop();
+  if (scrollTop > 200) {
+      $(".header-column").css("display", "none");
+
+  } else {
+      $(".header-column").css("display", "block"); 
+
+  }
+});
+  </script>
+</body>
+</html>

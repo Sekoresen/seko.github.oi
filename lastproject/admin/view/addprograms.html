@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div id="menuAdd">
+<h3>Programs</h3>
+<div class="alert alert-success" ng-show="successAlert">Succesfully added</div>
+<div class="alert alert-danger" ng-show="successEditAlert">Succesfully updated</div>
+<form name="myForm">
+    <div class="form-group">
+        <label for="program_name">Name:</label>
+        <input type="text" name="program_name" id="program_name" ng-model="programs[checkUrl].program_name" class="form-control" placeholder="Program name...">
+        <input type="hidden" name="program_id" id="program_id" class="form-control" ng-model="programs[checkUrl].program_id" >
+    </div>
+    <div class="form-group">
+        <label for="program_type">Program Type:</label>
+        <select  name="program_type" id="program_type" class="form-control" ng-model="programs[checkUrl].program_type">
+            <option ng-repeat="proType in programs_type" value="{{proType.program_type}}">
+                {{proType.program_type}}
+            </option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <button ng-show="checkUrl===undefined" class="btn btn-primary" 
+        ng-click="function_addProgram(programs[checkUrl].program_name, programs[checkUrl].program_type, programs[checkUrl].program_id, 'insert')">Save</button>
+    </div>
+    <div class="form-group">
+        <button ng-show="checkUrl!==undefined" class="btn btn-primary" 
+        ng-click="function_addProgram(programs[checkUrl].program_name, programs[checkUrl].program_type, programs[checkUrl].program_id, 'update')">Edit</button>
+    </div>
+</form>
+</div>
+</div>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessBodyPlan</title>
+    <!-- Bootstrap 4 Framework -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+
+    <!-- AngularJS Framework -->
+    <script src="../assets/js/angular.min.js"></script>
+    <script src="../assets/js/angular-route.js"></script>
+    <script src="assets/js/app.js"></script> <!--app js scripta za kucanje-->
+    <script src="assets/js/routes.js"></script> <!--routes js scripta za kucanje-->
+    
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="assets/css/style.css">  <!--css za kucanje-->
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a href="" class="navbar-brand"><img src="../uploads/lastproject.png" alt="" style="width: 80px; height: 80px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#verticalNavbar" aria-controls="verticalNavbar" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="verticalNavbar">
+            <ul class="navbar-nav mr-auto flex-column vertical-nav"> <!--flex columns-->
+               
+                <li class="nav-item">
+                    <a href="#!details_member" target="slider" class="nav-link btns"><img src="https://img.icons8.com/ios/50/000000/crowd.png"/>Add member</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!addsupplements" target="slider" class="nav-link btns"><img src="https://img.icons8.com/doodle/48/000000/protein-supplement.png"/>Add supplements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!addorders" target="slider" class="nav-link btns"><img src="https://img.icons8.com/doodle/48/000000/shopping-cart--v1.png"/>Add orders</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!addcategories" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_33_6469082585.jpg" class="rounded" alt=""> Add categories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!addprograms" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_35_4119274629.jpg" class="rounded" alt=""> Add programs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!addsubmenu" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_25_6057797943.png" class="rounded" alt=""> Add products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!addprogramstype" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_37_5345384510.jpg" class="rounded" alt=""> Add programs type</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!addtrainer" target="slider" class="nav-link btns"><img src="https://img.icons8.com/color/48/000000/personal-trainer.png"/>Add trainer</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!addtrainersupplement" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_6_8824734439.png" class="rounded" alt=""> Add trainer recommendation</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#!memberi" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_20_5095249401.jpg" class="rounded" alt=""> Members</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!supplements" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_3_8758691487.png" class="rounded" alt=""> Supplements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!orders" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_23_3719044017.png" class="rounded" alt=""> Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!categories" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_15_5965421853.png" class="rounded" alt=""> Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!submenu" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_31_4135082449.png" class="rounded" alt=""> Submenu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!programs" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_28_2167211270.png" class="rounded" alt=""> Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!programstype" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_12_7474936002.png" class="rounded" alt=""> Program Types</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!trainer"  target="slider" class="nav-link btns"><img src="https://img.icons8.com/color/48/000000/triceps.png"/>Trainer</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#!trainersupplement" target="slider" class="nav-link btns"><img src="../uploads/adminpictures/imageedit_9_9259939353.png" class="rounded" alt=""> Trainer recommendation</a>
+                </li>
+                <li class="nav-item">
+                    <a target="slider" class="nav-link btns" href="#!slider"><img src="../uploads/adminpictures/imageedit_9_9259939353.png" class="rounded" alt="">Slider</a>
+                  </li>
+                  <li class="nav-item">
+                    <a target="slider" class="nav-link btns"  href="#!details_slider"><img src="../uploads/adminpictures/imageedit_9_9259939353.png" class="rounded" alt="">Details Slider</a>
+                  </li>
+              
+                
+               </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="menudiv"></div>
+    <ng-view></ng-view>
+
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

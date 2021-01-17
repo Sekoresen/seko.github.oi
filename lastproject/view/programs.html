@@ -1,0 +1,28 @@
+<div class="container-fluid" id="proverkaVtora">
+  <div class="text-center ">
+    <h3 class="text-warning">Programs</h3>
+   
+  </div>      
+  <div class="row justify-content-center bg-light mb-5 mt-5">
+    <select class="form-control"  name="searchByProgramType" id="searchByProgramType" ng-model="searchByProgramType">
+      <option value="">All Programs</option>
+      <option ng-repeat="proType in programs_type" value="{{proType.program_type}}">{{proType.program_type}}</option></select>
+  </div>  
+  
+  <div class="row">         
+    <div class="col-sm-4" ng-repeat="programi in programs | filter:{program_name:searchByProgramName, program_type:searchByProgramType}">
+            
+      <div class="card pCard" style="margin: 10px; background-color: rgba(145, 214, 190, 0.801);">
+         <div class="card-body text-center">
+            <h4 class="card-title">{{programi.program_name}}</h4>
+            <p class="card-text">{{programi.program_type}}</p>
+            <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary btn-buy" data-toggle="modal" data-target="#myModal"
+  ng-click="function_getId($index)">Purchase <i class="fa fa-shopping-cart"></i></button>
+</div>
+  </div>
+  </div>
+  </div>
+  
+  </div><!-- end container-->   
+  

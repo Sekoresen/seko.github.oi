@@ -1,0 +1,62 @@
+<div class="container-flid" id="proverkaVtora">
+    <div class="text-left">
+        <h1>Trainers</h1>
+    </div>
+
+    <div class="row justify-content-center bg-light">
+      <div class="col-sm-6 col0-md-3">
+        <input style="margin-right:10px;" class="rounded"type="text" placeholder="search by name" name="searchByName" id="searchByName" ng-model="searchByName">
+        <input style="margin-right:10px;" class="rounded"type="text" placeholder="search by surname" name="searchBySurname" id="searchBySurname" ng-model="searchBySurname">
+        <input style="margin-right:10px;" class="rounded"type="number"placeholder="search by experience" name="searchByExperience" id="searchByExperience" ng-model="searchByExperience">
+        <input style="margin-right:10px;" class="rounded"type="number"placeholder="search by program" name="searchByProgram" id="searchByProgram" ng-model="searchByProgram">
+      </div>
+      </div>
+          <div class="row">         
+          <div class="col-sm-6 col-md-6 col-lg-3" ng-repeat="trener in trainer | filter:{trainer_name:searchByName, trainer_surname:searchBySurname, 
+            trainer_experience:searchByExperience, trainer_program:searchByProgram}">
+                  
+            <div class="card trainerCard" style="margin: 10px; background-color: rgba(6, 38, 100, 0.801);">
+                <img class="card-img-top trainerCard " src="uploads/trainers/{{trener.trainer_img}}" alt="Card image">
+                <div class="card-body text-center">
+                  <h4 class="card-title">{{trener.trainer_name}} {{trener.trainer_surname}}</h4>
+                  <p class="card-text"></p>
+                  <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+        ng-click="function_getId($index)">  
+          Recommended supplement by trainer <i class="fa fa-search"></i>
+        </button>
+        
+        <!-- The Modal -->
+        <div class="modal fade trainerModal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+        
+              <!-- Modal Header -->
+              <div class="modal-header text-center">
+                <h4 class="modal-title">{{trainer[getId].trainer_name}} {{trainer[getId].trainer_surname}} </h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body">
+                {{trainer[getId].trainer_name}} has {{trainer[getId].trainer_experience}} years of bodybuilding experience and he recommends using {{supplements[getId].supplement_name}} 
+                which he uses in his program {{trainer[getId].trainer_program}}
+              </div>
+        
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+                  
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        </div><!-- end container-->   
+</div>
+

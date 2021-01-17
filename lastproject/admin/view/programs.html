@@ -1,0 +1,54 @@
+<div class="container-fluid table-responsive" id="innerBg" >
+  <div id="menu">
+<h3>Programs</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+          <th>Program Name</th>
+            <th>Program Type</th>
+            <th><select class="form-control" name="searchByProgramType" id="searchByProgramType" ng-model="searchByProgramType">
+              <option value="">Type of programs</option>
+              <option ng-repeat="proType in programs_type" value="{{proType.program_type}}" >
+                {{proType.program_type}}
+              </option>
+            </select></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="programi in programs | filter:{program_type:searchByProgramType}">
+            <td>{{programi.program_name}}</td>
+            <td>{{programi.program_type}}</td>
+            <td><a href="#!addprograms/{{$index}}"><i class="fa fa-edit" title="edit"></i></a></td>
+            <td><button type="button" title="izbrisi?" class="btn btn-danger" ng-click="function_getId($index)"
+              data-toggle="modal" data-target="#myModal"><i class="fa fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header bg-danger">
+          <h4 class="modal-title">DELETE PROGRAMS </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Are you sure you want to delete {{programs[getId].program_name}}?
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" ng-click="function_deleteRow('programs',programs[getId].program_id)">DELETE</button>
+          <button type="button" class="btn btn-warning" data-dismiss="modal">CANCEL</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>

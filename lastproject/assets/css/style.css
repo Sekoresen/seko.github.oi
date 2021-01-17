@@ -1,0 +1,919 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* ===================
+=========NAVIGATION ===========
+============================ */
+.navbar .nav-item .nav-link {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: fangsong;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-link:hover{
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* ======================
+========END NAV==========
+========================= */
+
+
+ /* ------------------
+ --------Starting Carousel
+ -------------------- */
+.carousel-inner {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+ .carousel-caption {
+  color: #fff;
+  text-align: center;
+  font-family: fantasy;
+  text-align:start;
+}
+.carousel-caption h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  
+}
+.carousel-caption h2 {
+  margin: 10px 0 0 0;
+font-size: 24px;
+  color: #eee;
+  
+}
+
+.btn-get-started {
+  margin-top: 10px;
+  background: #ff12;
+  color: #fff;
+  border-radius: 25px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-get-started:hover {
+    color: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+/* ================
+====== END CAROUSEL=====
+=================== */
+
+/* ==============
+========SECTIONS GENERAL==============
+=================== */
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f6f7f6;
+}
+
+.section-title {
+  padding-bottom: 40px;
+}
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #163599;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #9ae1af;
+  margin: 4px 10px;
+}
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #685f7a;
+}
+/* ====================
+===================END SECTIONS ============
+========================== */
+/* ===================
+===========START ABOUT US - SHOP SUPPLEMENTS
+=========================== */
+
+.about .tekstot h3{
+  font-size: 30px;
+  font-weight: 500;
+  color: #25384ea2;
+}
+
+.about .tekstot ul {
+  list-style:none;
+  padding: 0;
+}
+
+.about .tekstot ul li {
+  padding-bottom: 10px;
+}
+
+.about .tekstot ul i {
+  color: rgba(37, 161, 60, 0.575);
+}
+.about .tekstot .shopSupp {
+  color: #fff;
+  padding: 8px 25px 9px 25px;
+  background: linear-gradient(to left, #051b05, #051b05, #34ab1d, #34ab1d);
+  border-radius: 30px;
+  transition: 0.3s;
+  display: inline-block;
+}
+.about .tekstot .shopSupp:hover{
+  background: linear-gradient(to left,  #34ab1d, #34ab1d, #051b05, #051b05);
+  text-decoration: none;
+}
+
+/* ===================
+===========END ABOUT US - SHOP SUPPLEMENTS
+=========================== */
+
+/* COUNTS */
+.counter-box {
+  display: block;
+  background: #f6f6f6;
+  padding: 40px 20px 37px;
+  text-align: center;
+}
+
+.counter-box p {
+  margin: 5px 0 0;
+  padding: 0;
+  color: #909090;
+  font-size: 18px;
+  font-weight: 500
+}
+
+.counter-box i {
+  font-size: 60px;
+  margin: 0 0 15px;
+  color: #d2d2d2;
+}
+
+.counter {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #666;
+  line-height: 28px
+}
+
+.counter-box.colored {
+  background: #3acf87
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+  color: #fff
+}
+
+/* END COUNTS */
+
+/* ==============
+==========CHECK TRAINERS=== WHY US======
+=====================*/
+
+.why-us .tekstot {
+  padding: 30px;
+  background: #5fcf80;
+  border-radius: 4px;
+  color: #fff;
+}
+.why-us .tekstot h3 {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.why-us .tekstot p {
+  margin-bottom: 30px;
+}
+
+.why-us .tekstot .trainer-btn {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 30px 8px 30px;
+  color: #fff;
+  border-radius: 50px;
+  transition: all ease-in-out 0.4s;
+}
+
+.why-us .tekstot .trainer-btn i {
+  font-size: 14px;
+}
+.why-us .tekstot .trainer-btn:hover {
+  background: linear-gradient(to left,  #34ab1d, #34ab1d, #051b05, #051b05);
+  text-decoration: none;
+}
+.why-us .card h4 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  font-family: monospace;
+  line-height: 2vh;
+  letter-spacing: 1px;
+}
+.why-us .card p {
+  font-size: 13px;
+  font-weight: 300;
+  text-align: start;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 2vh;
+  letter-spacing: 1px;
+}
+
+.why-us .card .social i {
+
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #111111;
+}
+
+/* ====================
+=========Programs Section=============
+========================== */
+#popular-programs {
+  width: 100%;
+  height: 100%;
+  background: url("../../uploads/nutritionTwo.jpg");
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+#popular-programs:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0
+}
+
+#popular-programs .container {
+  padding-top: 72px;
+}
+
+.programs .programs-item {
+border-radius: 5px;
+border: 1px solid #eef0ef;
+}
+.programs .programs-content h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.programs .programs-content h3 a {
+  color: #fff;
+  transition: 0.3s;
+}
+.programs .programs-content h3 a:hover {
+  color: #5fcf80;
+}
+
+.programs .programs-content p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.programs .programs-content h4 {
+  font-size: 14px;
+  background: #5fcf80;
+  padding: 7px 14px;
+  color: #fff;
+  margin: 0
+}
+.programs .programs-content .price {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.programs .trainer {
+  padding-top: 15px;
+  border-top: 1px solid #eef0ef;
+}
+
+.programs .trainer .trainer-profile img {
+  max-width: 50px;
+  border-radius: 50px;
+}
+
+.programs .trainer .trainer-profile span {
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+}
+
+.programs .trainer .trainer-rank {
+  font-size: 18px;
+  color: #fff;
+}
+
+.section-titleDif {
+  padding-bottom: 40px;
+}
+.section-titleDif h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-titleDif h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #9ae1af;
+  margin: 4px 10px;
+}
+.section-titleDif p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+/* ================
+===========END PROGRAMS===============
+============================ */
+
+
+/* ====================
+============REVIEWS=================
+====================== */
+.reviews .member {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #eef0ef;
+}
+
+.reviews  .member .member-content {
+  padding: 0 20px 30px 20px;
+}
+
+.reviews .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+.reviews .member p {
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: #aaaaaa;
+}
+
+.btn-reviews {
+  background: linear-gradient(to left, #ffd900c9, #34ab1d, #dd890a, #051b05);
+  text-decoration: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+  padding: 8px 25px 9px 25px;
+}
+@media (max-width:992px){
+  .btn-reviews {
+    margin: 100px;
+  }
+}
+.btn-reviews:hover {
+  background: linear-gradient(to right, #051b05, #dd890a,#ffd900c9, #34ab1d);
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ====================
+============ END REVIEWS=================
+====================== */
+
+/* ====================
+============FOOTER=================
+====================== */
+
+#footer {
+  color: #37423b;
+  font-size: 14px;
+  background: #eef0ef;
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  background: #f9faf9;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact h4 {
+  font-size: 22px;
+  margin: 0 0 30px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+#footer .footer-top .footer-contact p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  color: #777777;
+}
+
+#footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444444;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #5fcf80;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #777777;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  text-decoration: none;
+  color: #5fcf80;
+}
+
+#footer .footer-newsletter {
+  font-size: 15px;
+}
+
+#footer .footer-newsletter h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444444;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-newsletter form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px;
+  text-align: left;
+  border: 1px solid #e0e5e2;
+}
+
+#footer .footer-newsletter form input[type="email"] {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+
+#footer .footer-newsletter form input[type="submit"] {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px 2px 20px;
+  background: #5fcf80;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#footer .footer-newsletter form input[type="submit"]:hover {
+  background: #3ac162;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  font-size: 13px;
+}
+
+#footer .credits a {
+  color: #3ac162;
+  transition: 0.3s;
+}
+
+#footer .credits a:hover {
+  color: #5fcf80;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #5fcf80;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: #3ac162;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-signup {
+  background: rgba(7, 80, 23, 0.589);
+  text-decoration: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+  padding: 8px 25px 9px 25px;
+  margin-left: 130px;
+  margin-top: 20px;
+}
+
+/* ====================
+============ END FOOTER=================
+====================== */
+/* ====================
+=====================Media Queries=============
+========================== */
+@media (max-width:992px) {
+  .navbar .nav-item .nav-link {
+    font-size: 19px;
+  }
+}
+
+@media (max-width:992px) {
+  .carousel-caption h1 {
+    font-size: 20px;
+  }
+}
+@media (max-width:992px) {
+  .carousel-caption h2 {
+    font-size: 15px;
+  }
+}
+/* ====================
+===================== End Media Queries=============
+========================== */
+
+
+/* ==================
+==========SUPPLEMENTS SHOPP PAGE========
+====================== */
+
+
+#proverka {
+  background:linear-gradient(to top, rgba(155, 255, 155, 0.5), rgba(155, 155, 255, 0.6)), url(../../uploads/backgroundimg.jpg);
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1000px;
+}
+@media (max-width:992px) {
+  #proverka {
+    height: 100%;
+  }
+}
+
+#proverka h1{
+  font-size: 50px;
+  color: rgb(3, 41, 58);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  padding-top: 150px;
+  
+}
+.btn-list {
+  border-radius: 20px;
+  color: rgb(3, 41, 58);
+    font-size: 15px;
+    font-family: cursive;
+    padding: 5px 20px 5px 20px;
+    margin: 1px 2px 1px 2px;
+    min-width: 200px;
+    background-color: #1973a7;
+    display: inline-block;
+}
+@media (max-width:992px) {
+  .btn-list {
+    border-radius: 15px;
+    color: #fff;
+    font-size: 8px;
+    font-family: cursive;
+    padding: 5px;
+    margin: 1px 2px 1px 2px;
+    background-color: #1973a7;
+    display: inline-block;
+    min-width: 120px;
+    max-width: 150px;
+  }
+}
+@media (max-width:1300px) {
+  .btn-list {
+    border-radius: 15px;
+    color: #fff;
+    font-size: 8px;
+    font-family: cursive;
+    padding: 5px;
+    margin: 1px 2px 1px 2px;
+    background-color: #1973a7;
+    display: inline-block;
+    min-width: 120px;
+    max-width: 150px;
+  }
+}
+@media (max-width:1024px) {
+  .btn-list {
+    border-radius: 15px;
+    color: #fff;
+    font-size: 8px;
+    font-family: cursive;
+    padding: 5px;
+    margin: 1px 2px 1px 2px;
+    background-color: #1973a7;
+    display: inline-block;
+    min-width: 120px;
+    max-width: 150px;
+  }
+}
+.btn-list:hover {
+  border-radius: 20px;
+  color: #0d4123;
+  font-size: 15px;
+  font-family: cursive;
+  padding: 5px 20px 5px 20px;
+  margin: 1px 2px 1px 2px;
+  min-width: 200px;
+  background-color: #0aa84c;
+}
+@media (max-width:992px) {
+  .btn-list:hover {
+    border-radius: 5px;
+    color: #fff;
+    font-size: 8px;
+    font-family: cursive;
+    padding: 5px;
+    margin: 1px 2px 1px 2px;
+    background-color: #1973a7;
+    display: inline-block;
+    min-width: 120px;
+    max-width: 150px;
+  }
+}
+@media (max-width:1024px) {
+  .btn-list:hover {
+    border-radius: 5px;
+    color: #fff;
+    font-size: 8px;
+    font-family: cursive;
+    padding: 5px;
+    margin: 1px 2px 1px 2px;
+    background-color: #1973a7;
+    display: inline-block;
+    min-width: 120px;
+    max-width: 150px;
+  }
+}
+@media (max-width:1024px) {
+  .btn-list:hover {
+    border-radius: 5px;
+    color: #fff;
+    font-size: 8px;
+    font-family: cursive;
+    padding: 5px;
+    margin: 1px 2px 1px 2px;
+    background-color: #1973a7;
+    display: inline-block;
+    min-width: 120px;
+    max-width: 150px;
+  }
+}
+.iminja {
+  border: 3px solid rgba(139, 207, 218, 0.788);
+  border-radius: 20px;
+  margin-bottom: 5px;
+  }
+  @media (max-width:992px) {
+    .iminja {
+      display: inline-block;
+      margin-left: 50px;
+
+    }
+  }
+.iminja h6  {
+  color: rgb(0, 0, 0, 1);
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: oblique;
+}
+.iminja p  {
+  color: rgb(0, 0, 0, 1);
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: bold;
+  
+}
+
+
+/* =====================
+============Programs REVIEW=================
+=============================== */
+
+#proverkaVtora {
+  background-color: rgb(231, 231, 216);
+ 
+  width: 100%;
+  height: auto;
+}
+
+#proverkaVtora h3{
+  font-size: 50px;
+  color: rgb(11, 39, 8)!important ;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  padding-top: 150px;
+  }
+.pCard {
+  border: solid 1px green;
+  border-radius: 20px;
+}
+
+.pCard h4 {
+  font-style: italic;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+.pCard p {
+  font-style: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+.btn-buy {
+  color: #111;
+  font-size: 15px;
+  border: solid 1px rgb(170, 196, 153);
+  border-radius: 20px;
+  background-color: rgba(176, 204, 160, 0.5);
+}
+.btn-buy:hover {
+  color: #fff;
+  font-size: 15px;
+  border-radius: 20px;
+  background-color: rgba(40, 95, 197, 0.726);
+}
+
+/* =====================
+====================Programs End===========
+============================ */
+
+/* ======================
+==================Members Reviews ==============
+============================= */
+
+#proverkaVtora h1{
+  font-size: 50px;
+  color: rgb(11, 39, 8)!important ;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  padding-top: 150px;
+  }
+
+  /* ======================
+==================Trainers Reviews ==============
+============================= */
+
+.trainerCard {
+  border-radius: 50px;
+  border: transparent;
+  background: linear-gradient(to left, #366656, #0d987c 50%, #00d4ff 75%, #00d4ff 75%);
+}
+
+.trainerCard .btn {
+  border-radius: 25px;
+  background-color: rgba(41, 194, 156, 0.788);
+  border: transparent;
+  color: #051b05;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 10px;
+  text-transform: uppercase;
+  
+}
+
+.trainerCard .btn:hover {
+  border-radius: 25px;
+  background: linear-gradient(to right, #124def 25%,  #4862aa 35%,  #8793b3 50%,  #b0b3b9 75% );
+  border: transparent;
+  color: #051b05;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  
+}
+
+.trainerModal .modal-content {
+  border-radius: 50px;
+  background-color: rgba(177, 193, 199, 0.9);
+  }
+.modal-body {
+  background-color: rgba(144, 189, 206, 0.685);
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+  font-style: italic;
+  font-family: fangsong;
+}
+ 

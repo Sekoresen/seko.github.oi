@@ -1,0 +1,41 @@
+<div class="container-fluid table-responsive">
+<div id="menu">
+<h3>Type of programs</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Programs</th>
+            <th>DELETE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="proType in programs_type">
+            <td>{{proType.program_type}}</td>
+            <td><button type="button" title="delete?" class="btn btn-danger" ng-click="function_getId($index)" 
+                data-toggle="modal" data-target="#myModal"><i class="fa fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <!--Modal header-->
+        <div class="modal-header bg-danger">
+            <h4 class="modal-title">Delete Programs</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!--Modal body-->
+        <div class="modal-body">
+            {{programs_type[getId].program_type}}
+        </div>
+        <!--Modal footer-->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" ng-click="function_deleteRow('programs_type', programs_type[getId].program_type)">DELETE</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">CANCEL</button>
+          </div>
+    </div>
+    </div>
+</div>

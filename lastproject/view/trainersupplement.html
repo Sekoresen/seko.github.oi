@@ -1,0 +1,46 @@
+<div class="container-fluid table-responsive" id="innerBg" >
+    <div id="menu">
+<h3>Trainer recommend</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>recommend</th>
+            <th>trener</th>
+            <th>STATUS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="tresupp in trainer_supplement">
+            <td></td>
+            <td>{{tresupp.trainer_id}}</td>
+            <td>{{tresupp.supplement_id}}</td>
+            <td><a href="#!addtrainersupplement/{{$index}}"><i class="fa fa-edit"></i></a></td>
+            <td><button type="button" class="btn btn-danger" ng-click="function_getId($index)"
+                data-toggle="modal" data-target="#myModal"><i class="fa fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <!--Modal header-->
+        <div class="modal-header bg-danger">
+            <h4 class="modal-title">Delete Orders</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!--Modal body-->
+        <div class="modal-body">
+            {{trainer_supplement[getId].trainer_supplement_id}}
+        </div>
+        <!--Modal footer-->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" ng-click="function_deleteRow('trainer_supplement', trainer_supplement[getId].trainer_supplement_id)">DELETE</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">CANCEL</button>
+          </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+  <div id="proverka">
+    <h1 class="text-left">Categories</h1>
+    <div class="text-left">
+      <div class="row">
+        <div class="col-3">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div ng-repeat="categories in categories">
+                <button class="btn btn-info mr-2 btn-list" ng-click="function_myId(categories.category_name)">{{categories.category_name}}</button>
+              </div>
+            </div>
+          
+         <div class="col-sm-6 col-xs-12">
+          <div class="text-left">
+            <div ng-repeat="submenu in submenu | filter:{category_name:myId}">
+              <button class="btn btn-info mt-2 mr-2 btn-list" ng-click="function_getId(submenu.product_id)">{{submenu.product_type}}</button>
+            </div>
+         </div>
+        </div>
+        </div>
+        </div>
+        
+     <div class="col-9">
+      <div class="row mt-4 mb-3 pb-4" ng-init="getId=''">
+        <div class="col-sm-6 col-md-4 col-lg-3" ng-repeat="supplements in supplements | filter:{product_id:getId}">
+          <div class="text-center iminja">
+            <img src="uploads/supplements/{{supplements.supplement_img}}" alt="" width="140" height="120">
+            <h6 class="pt-1">{{supplements.supplement_name}}</h6>
+            <p>{{supplements.supplement_size}} gr</p>
+            <p>{{supplements.supplement_taste}}</p>
+            <p>{{supplements.supplement_price}} $</p>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
+  </div>
+  </div>

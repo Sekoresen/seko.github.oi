@@ -1,0 +1,41 @@
+<div class="container-fluid table-responsive" >
+    <div id="menu">
+<h3>Categories</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="categories in categories">
+            <td>{{categories.category_name}}</td>
+            <td><button type="button" title="delete?" class="btn btn-danger" ng-click="function_getId($index)" 
+                data-toggle="modal" data-target="#myModal"><i class="fa fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <!--Modal header-->
+        <div class="modal-header bg-danger">
+            <h4 class="modal-title">Delete Categories</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!--Modal body-->
+        <div class="modal-body">
+            {{categories[getId].category_name}}
+        </div>
+        <!--Modal footer-->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" ng-click="function_deleteRow('categories', categories[getId].category_name)">DELETE</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">CANCEL</button>
+          </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>

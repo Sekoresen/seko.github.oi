@@ -1,0 +1,36 @@
+<div class="container-fluid">
+<div id="menuAdd">
+<h3>Trainer Recommendation</h3>
+
+<div class="alert alert-success" ng-show="successAlert">Sucessfully added</div>
+<div class="alert alert-success" ng-show="successEditAlert">Sucessfully updated</div>
+
+<form name="myForm">
+    <div class="form-group">
+        <label for="trainer_id">Trainer</label>
+        <select class="form-control" name="trainer_id" id="trainer_id" ng-model="trainer_supplement[checkUrl].trainer_id">
+            <option ng-repeat="trener in trainer" value="{{trener.trainer_id}}">
+                {{trener.trainer_name}}
+            </option>
+        </select>
+        <input type="hidden" name="trainer_supplement_id" id="trainer_supplement_id"ng-model="trainer_supplement[checkUrl].trainer_supplement_id" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="supplement_id">Supplement</label>
+        <select class="form-control" name="supplement_id" id="supplement_id" ng-model="trainer_supplement[checkUrl].supplement_id">
+            <option ng-repeat="supplements in supplements" value="{{supplements.supplement_id}}">
+                {{supplements.supplement_name}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button ng-show="checkUrl===undefined" class="btn btn-primary" 
+        ng-click="function_addTrenerSup(trainer_supplement[checkUrl].trainer_id, trainer_supplement[checkUrl].supplement_id, trainer_supplement[checkUrl].trainer_supplement_id, 'insert')">SAVE</button>
+    </div>
+    <div class="form-group">
+        <button ng-show="checkUrl!==undefined" class="btn btn-primary" 
+        ng-click="function_addTrenerSup(trainer_supplement[checkUrl].trainer_id, trainer_supplement[checkUrl].supplement_id, trainer_supplement[checkUrl].trainer_supplement_id, 'update')">UPDATE</button>
+    </div>
+</form>
+</div>
+</div>

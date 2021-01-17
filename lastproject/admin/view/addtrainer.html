@@ -1,0 +1,55 @@
+<div class="container-fluid">
+
+
+<div id="menuAdd">
+
+    <h3>ADD TRENER</h3>
+<div class="alert alert-success" ng-show="successAlert">Succesfully added new trainer</div>
+<div class="alert alert-success" ng-show="successEditAlert">Succesfully updated trainer</div>
+<div class="alert alert-danger" ng-show="dangerAlert">Please fill the form</div>
+<div class="alert alert-info" ng-show="infoAlert">Duplicate Entry</div>
+<form name="myForm">
+    <div class="form-group">
+        <label for="trainer_name">First Name:</label>
+        <div ng-show="myForm.trainer_name.$invalid" class="alert alert-danger">Please fill the form...</div>
+        <input type="text" class="form-control"  name="trainer_name" id="trainer_name" ng-model="trainer[checkUrl].trainer_name" placeholder="Add first name..." ng-minlength="3">
+        <input type="hidden" name="trainer_id" id="trainer_id" class="form-control" ng-model="trainer[checkUrl].trainer_id">
+        
+    </div>
+    <div class="form-group">
+        <label for="trainer_surname">Last Name:</label>
+        <div ng-show="myForm.trainer_surname.$invalid" class="alert alert-danger">Please fill the form...</div>
+        <input type="text" class="form-control" name="trainer_surname" id="trainer_surname" ng-model="trainer[checkUrl].trainer_surname"  placeholder="Add last name..." ng-minlength="3">
+    </div>
+    <div class="form-group">
+        <label for="trainer_experience">Experience:</label>
+        <input type="text" class="form-control" name="trainer_experience" id="trainer_experience" ng-model="trainer[checkUrl].trainer_experience"  placeholder="Add trainer experience...">
+    </div>
+    <div class="form-group">
+        <label for="trainer_program">Trainer Program:</label>
+        <input type="text" class="form-control" name="trainer_program" id="trainer_program" ng-model="trainer[checkUrl].trainer_program"  placeholder="Add program...">
+    </div>
+    <div class="form-group">
+        <label for="trainer_img">Trainer Image</label>
+        <input type="text" class="form-control" name="trainer_img" id="trainer_img" ng-model="trainer[checkUrl].trainer_img"  placeholder="Add picture...">
+    </div>
+   
+    <div class="form-group">
+        <button ng-show="checkUrl===undefined" class="btn btn-primary" ng-click="(myForm.trainer_name.$valid && myForm.trainer_surname.$valid)   ?
+        function_addTrainer(trainer[checkUrl].trainer_name, trainer[checkUrl].trainer_surname, trainer[checkUrl].trainer_experience, trainer[checkUrl].trainer_program, trainer[checkUrl].trainer_img, trainer[checkUrl].trainer_id, 'insert') :
+        function_error()">Save</button>
+    </div>
+
+    <div class="form-group">
+        <button ng-show="checkUrl!==undefined" class="btn btn-primary" ng-click="(myForm.trainer_name.$valid && myForm.trainer_surname.$valid)   ?
+        function_addTrainer(trainer[checkUrl].trainer_name, trainer[checkUrl].trainer_surname, trainer[checkUrl].trainer_experience, trainer[checkUrl].trainer_program, trainer[checkUrl].trainer_img, trainer[checkUrl].trainer_id, 'update') :
+        function_error()">Edit</button>
+    </div>
+
+    
+       
+
+    
+</form>
+</div>
+</div>

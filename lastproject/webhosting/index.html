@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: normal;
+            direction: ltr;
+            background: white;
+             }
+        form {
+            margin: 5% auto 0 auto;
+            padding: 30px;
+            width: 400px;
+            height: auto;
+            overflow: hidden;
+            background: white;
+            border-radius: 10px;
+        }     
+        form label {
+            font-size: 14px;
+            color: darkgray;
+            cursor: pointer;
+        }
+        form label,
+        form input {
+            float: left;
+            clear: both;
+        }
+        form input {
+            margin: 15px 0;
+            padding: 15px 10px;
+            width: 100%;
+            outline: none;
+            border: 1px solid #bbbbbb;
+            border-radius: 20px;
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing:border-box;
+            -webkit-transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all ;
+            -ms-transition: 0.2s ease all ;
+            -o-transition: 0.2s ease all;
+            transition: 0.2s ease all;
+         }
+         textarea {
+            margin: 15px 0;
+            padding: 15px 10px;
+            width: 100%;
+            outline: none;
+            border: 1px solid #bbbbbb;
+            border-radius: 20px;
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing:border-box;
+            -webkit-transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all ;
+            -ms-transition: 0.2s ease all ;
+            -o-transition: 0.2s ease all;
+            transition: 0.2s ease all;
+         }
+         form input[type=text]:focus,
+         form input[type="emal"]:focus {
+             border-color: cornflowerblue;
+         }
+         input[type=submit]{
+             padding: 15px 50px;
+             width: auto;
+             background: #1abc9c;
+             border: none;
+             color: white;
+             cursor: pointer;
+             display: inline-block;
+             float: right;
+             clear: right;
+             -webkit-transition: 0.2s ease all;
+             -moz-transition:  0.2s ease all;
+             -ms-transition: 0.2s ease all ;
+             -o-transition:  0.2s ease all;
+             transition:  0.2s ease all; 
+         }
+        input[type=submit]:hover {
+            opacity:0.8;
+        }
+        input [type="submit"]:active {
+            opacity:0.4;
+        }
+        #logo {
+            margin: 0 auto;
+            width: 100px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif, cursive;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            color: lightgray;
+            -webkit-transition: 0.2s ease all ;
+            -moz-transition: 0.2s ease all ;
+            -ms-transition: 0.2s ease all ;
+            -o-transition: 0.2s ease all ;
+            transition:  0.2s ease all;
+        }
+        #logo:hover {
+            color: cornflowerblue
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="contact.php">
+
+        <label for="username">Вашето Име</label>
+        <input type="text" name="name" class="form-control"
+        placeholder="Вашето Име" required>
+        <label for="surname">Вашето Презиме</label>
+        <input type="text" name="surname" class="form-control"
+        placeholder="Вашето Презиме" required>
+        <label for="email">Вашиот Емаил</label>
+        <input type="text" name="email" class="form-control"
+        placeholder="Вашиот Емаил" required>
+        <label for="embg">EMBG</label>
+        <input type="text" name="embg" class="form-control"
+        placeholder="Вашиот Матичен број" required>
+    <textarea name="message" cols="50" rows="7" class="form-control" placeholder="Порака"required></textarea>
+
+    <input type="submit" name="submit" value="Испрати Порака"/>
+    </form>
+
+
+    </body>
+</html>

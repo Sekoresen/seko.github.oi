@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div id="menuAdd">
+<h3>Add orders</h3>
+
+<div class="alert alert-success" ng-show="successAlert">Sucessfully added new order</div>
+
+<form name="myForm">
+    <div class="form-group">
+        <label for="product_Id">Product:</label>
+        <select class="form-control" name="product_id" id="product_id" ng-model="orders[checkUrl].product_id">
+            <option ng-repeat="submenu in submenu" value="{{submenu.product_id}}">
+                {{submenu.product_type}}
+            </option>
+        </select>
+        <input type="hidden" name="order_id" id="order_id"ng-model="orders[checkUrl].order_id" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="member_id">Member:</label>
+        <select class="form-control" name="member_id" id="member_id" ng-model="orders[checkUrl].member_id">
+            <option ng-repeat="members in member" value="{{members.member_id}}">
+                {{members.member_name}} {{members.member_surname}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="payment_status">Payment Status</label>
+        <select class="form-control" name="payment_status" id="payment_status" ng-model="orders[checkUrl].payment_status">
+            <!-- <option ng-repeat="orders in orders" value="{{orders.payment_status}}"> </option> -->
+            <option value="PAID">Paid</option>
+            <option value="NOTPAID">Not Paid</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button ng-show="checkUrl===undefined" class="btn btn-primary" 
+        ng-click="function_addOrder(orders[checkUrl].product_id, orders[checkUrl].member_id, orders[checkUrl].payment_status, orders[checkUrl].order_id, 'insert')">SAVE</button>
+    </div>
+    <div class="form-group">
+        <button ng-show="checkUrl!==undefined" class="btn btn-primary" 
+        ng-click="function_addOrder(orders[checkUrl].product_id, orders[checkUrl].member_id, orders[checkUrl].payment_status, orders[checkUrl].order_id, 'update')">Edit</button>
+    </div>
+</form>
+</div>
+</div>

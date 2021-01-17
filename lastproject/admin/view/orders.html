@@ -1,0 +1,48 @@
+<div class="container-fluid table-responsive" id="innerBg" >
+    <div id="menu">
+<h3>ORDERS</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>PRODUCT</th>
+            <th>MEMBER</th>
+            <th>STATUS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="order in orders">
+            <td></td>
+            <td>{{order.product_type}}</td>
+            <td>{{order.member_name}}</td>
+            <td>{{order.payment_status}}</td>
+            <td><a href="#!addorders/{{$index}}"><i class="fa fa-edit"></i></a></td>
+            <td><button type="button" class="btn btn-danger" ng-click="function_getId($index)"
+                data-toggle="modal" data-target="#myModal"><i class="fa fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <!--Modal header-->
+        <div class="modal-header bg-danger">
+            <h4 class="modal-title">Delete Orders</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!--Modal body-->
+        <div class="modal-body">
+            Do you want to delete order from {{orders[getId].member_name}} {{orders[getId].member_surname}} for {{orders[getId].product_type}} ?
+        </div>
+        <!--Modal footer-->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" ng-click="function_deleteRow('orders', orders[getId].order_id)">DELETE</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">CANCEL</button>
+          </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>

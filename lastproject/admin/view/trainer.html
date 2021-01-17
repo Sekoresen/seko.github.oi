@@ -1,0 +1,54 @@
+
+<div class="container-fluid table-responsive" id="innerBg" >
+<div id="menu">
+<h3>Trainer</h3>
+
+<table class="table table-striped table-hover" >
+    <thead>
+        <tr>
+            <th></th>
+            <th><input type="text" placeholder="Search by name" name="searchByName" id="searchByName" ng-model="searchByName"></th>
+            <th><input type="text" placeholder="Search by surname" name="searchBySurname" id="searchBySurname" ng-model="searchBySurname"></th>
+            <th>Trainer Experience</th>
+            <th>Trainer Program</th>
+            <th>EDIT</th> <!--edit-->
+            <th>DELETE</th> <!--delete-->
+         </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="trener in trainer | filter:{trainer_name:searchByName, trainer_surname:searchBySurname}">
+        <td><img style="width: 30px; height: 30px;" src="../uploads/trainers/{{trener.trainer_img}}" alt="{{trener.trainer_img}}"/></td>
+        <td>{{trener.trainer_name}}</td>
+        <td>{{trener.trainer_surname}}</td>
+        <td>{{trener.trainer_experience}}</td>
+        <td>{{trener.trainer_program}}</td>
+        <td><a href="#!addtrainer/{{$index}}"><i class="fa fa-edit"></i></a></td>
+        <td><button type="button" title="delete?" class="btn btn-danger" ng-click="function_getId($index)"
+            data-toggle="modal" data-target="#myModal"><i class="fa fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+</div>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <!--Modal header-->
+        <div class="modal-header bg-danger">
+            <h4 class="modal-title">Delete trainer</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!--Modal body-->
+        <div class="modal-body">
+        Are you sure you want to delete {{trainer[getId].trainer_name}} {{trainer[getId].trainer_surname}}
+        </div>
+        <!--Modal footer-->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" ng-click="function_deleteRow('trainer', trainer[getId].trainer_id)">DELETE</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">CANCEL</button>
+          </div>
+    </div>
+    </div>
+</div>
+

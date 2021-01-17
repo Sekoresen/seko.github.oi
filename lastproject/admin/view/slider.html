@@ -1,0 +1,54 @@
+<div class="container">
+  <div id="menu">
+
+<h3>Tabela Slider</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th><input type="text" placeholder="Prebaraj po ime"
+              name="searchByName" id="searchByName" ng-model="searchByName"></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="sliders in slider | filter:{slider_img:searchByName}">
+            <td>{{sliders.slider_id}}</td>
+            <td><img style="width: 30px; height:30px;" src="../uploads/carousel/{{sliders.slider_img}}" alt=""></td>
+            <td>{{sliders.slider_img}}</td>
+            <td><button type="button" title="izbrisi" class="btn btn-danger" ng-click="function_getId($index);"
+                data-toggle="modal" data-target="#myModal"><i class="fa fa-trash"></i></button></td>
+        </tr>
+      </tbody>
+</table>
+</div>
+</div>
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header bg-danger">
+          <h4 class="modal-title">DELETE Slider </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="alert alert-info" ng-show="infoAlert">
+            Ovaj zapis nemozi da se izbrisi
+          </div>
+         Delete this slider {{slider[getId].slider_img}}
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <button ng-show="!infoAlert" type="button" class="btn btn-danger" ng-click="function_deleteRow('slider',slider[getId].slider_id)" >Delete</button>
+          <button type="button" class="btn btn-warning" data-dismiss="modal">CANCEL</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,71 @@
+
+<div class="container-fluid table-responsive" id="innerBg" >
+  <div id="menu">
+
+<h3>supplements</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th><input type="text" name="searchBySupplementName" id="searchBySupplementName" ng-model="searchBySupplementName" placeholder="Name..."></th>
+            <th>Size (gr)</th>
+            <th><input type="text" name="searchBySupplementTaste" id="searchBySupplementTaste" ng-model="searchBySupplementTaste" placeholder="Taste..."></th>
+            <th>Price</th>
+            <th></th>
+            <th>Search by Product:<select name="searchByProductId" id="searchByProductId" ng-model="searchByProductId" class="form-control">
+                <option value="">All Supplements</option>
+                <option ng-repeat="submenu in submenu" value="{{submenu.product_id}}">
+                    {{submenu.product_type}} ({{submenu.category_name}})
+                </option>
+            </select></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="supplements in supplements | filter:{supplement_name:searchBySupplementName, supplement_taste:searchBySupplementTaste, product_id:searchByProductId}">
+            <td><img style="width:30px; height:30px;" src="../uploads/supplements/{{supplements.supplement_img}}" alt=""></td>
+            <td>{{supplements.supplement_name}}</td>
+            <td>{{supplements.supplement_size}}</td>
+            <td>{{supplements.supplement_taste}}</td>
+            <td>{{supplements.supplement_price}}</td>
+            <td></td>
+            <td></td>
+            <!-- <td>{{supplements.supplement_img}}</td>
+            <td>{{supplements.product_id}}</td> -->
+            <td><a href="#!addsupplements/{{$index}}"><i class="fa fa-edit"></i></a></td>
+            <td><button type="button" title="delete" class="btn btn-danger" ng-click="function_getId($index)"
+                data-toggle="modal" data-target="#myModal"><i class="fa fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header bg-danger">
+          <h4 class="modal-title">DELETE {{supplements[getId].supplement_name}} </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+         Specifications: {{supplements[getId].supplement_name}}
+         {{supplements[getId].supplement_size}}gr
+         {{supplements[getId].supplement_taste}}
+         {{supplements[getId].supplement_price}}$
+         ?
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" ng-click="function_deleteRow('supplements',supplements[getId].supplement_id)">DELETE</button>
+          <button type="button" class="btn btn-warning" data-dismiss="modal">CANCEL</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
